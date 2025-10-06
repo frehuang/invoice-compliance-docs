@@ -1,8 +1,22 @@
 ---
+# 这个文件会被 Jekyll 自动编译成 /assets/css/style.css
 ---
-@import "jekyll-theme-cayman";
+
+/* 蓝色头图主题覆盖 (基于 Cayman) */
 .page-header {
   background-image: linear-gradient(135deg, #1e3a8a, #1d4ed8);
   background-color: #1d4ed8;
 }
-.project-name, .project-tagline { color: #fff !important; }
+
+.project-name, .project-tagline {
+  color: #fff !important;
+}
+
+.main-content a {
+  text-decoration: none;
+}
+
+.footer {
+  background: #0f172a;
+  color: #cbd5e1;
+}
