@@ -1,32 +1,44 @@
 name: Deploy GitHub Pages (Jekyll /docs)
+
 on:
   push:
     branches: [ "main" ]
   workflow_dispatch:
+
 permissions:
   contents: read
   pages: write
   id-token: write
+
 concurrency:
   group: "pages"
   cancel-in-progress: true
+
 jobs:
   build:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
         uses: actions/checkout@v4
-      - name: Setup Pages
-        uses: actions/configure-pages@v5
-      - name: Build with Jekyll
-        uses: actions/jekyll-build@v1
+
+      - name: Setup Ruby
+        uses: ruby/setup-ruby@v1
         with:
-          source: ./docs
-          destination: ./_site
+          ruby-version: '3.1' # 或 3.2
+
+      - name: Install dependencies
+        run: |
+          gem install bundler jekyll
+
+      - name: Build site
+        run: |
+          jekyll build --source ./docs --destination ./_site
+
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
           path: ./_site
+
   deploy:
     environment:
       name: github-pages
