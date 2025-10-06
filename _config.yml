@@ -1,0 +1,10 @@
+title: 发票合规文档库
+description: 面向全球电子发票（e‑Invoicing）的中文知识库与实践指南
+theme: jekyll-theme-cayman
+lang: zh-CN
+timezone: Asia/Shanghai
+exclude:
+  - README.md
+  - "*.zip"
+plugins:
+  - jekyll-seo-tag
