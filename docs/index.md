@@ -10,8 +10,9 @@ title: 首页
 
 ## 导航
 - **快速开始**：[如何使用本库](guide/quickstart.md)
+- **KDUBL**：[KDUBL](einvoice/kdubl.md)
 - **国家库**：[Countries](countries/README.md)
-- **标准规范**：[Standards](standards/README.md)
+- **其他规范**：[ Other Standards](standards/README.md)
 - **法规雷达 / 周报**：[Updates](updates/README.md)
 - **名词表**：[术语表](guide/glossary.md)
 - **贡献指南**：[Contribute](guide/contribute.md)
